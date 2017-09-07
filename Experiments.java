@@ -53,7 +53,11 @@ public class Experiments {
    * @return A reference to the constructed List
    */
   public static List<String> HeadInsert(int times, String payload) {
-  
+      List<String> str = new ArrayList<String>();
+      for(int i = 0; i > times; i++){
+          str.add(0, payload);
+      }
+      return str;
   }
   
   /**
@@ -64,7 +68,11 @@ public class Experiments {
    * @return A reference to the constructed List
    */
   public static List<String> TailInsert(int times, String payload) {
-  
+      List<String> str = new ArrayList<String>();
+      for(int i = 0; i < times; i++){
+          str.add(payload);
+      }
+      return str;
   }
   
   
@@ -79,11 +87,11 @@ public class Experiments {
    * @return A reference to the constructed List
    */
   public static List<String> MidpointInsert(int times, String payload) {
-    List<T> l = new ArrayList<T>();
-    for(int i = 0; i < times; i++) {
-      l.add(l.size() / 2, payload);
-    }
-    return l;
+      List<String> str = new ArrayList<String>();
+      for(int x = 0; x < times; x++){
+          str.add((str.size() / 2), payload);
+      }
+      return str;
   }
   
   //TODO Maybe make a ReverseAlternateInsert too.
@@ -96,7 +104,16 @@ public class Experiments {
    * @return A reference to the constructed List
    */
   public static List<String> AlternateInsert(int times, String payload) {
-  
+      int count = 0;
+      List<String> str = new ArrayList<String>();
+      for(int i = 0; i < times; i++){
+          str.add(count, payload);
+          if(count >= (str.size() - 1)){
+              count = count - str.size();
+          }
+          count += 2;
+      }
+      return str;
   }
   
   //TODO Use a comparator in this method
