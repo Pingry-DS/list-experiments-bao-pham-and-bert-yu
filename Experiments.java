@@ -15,32 +15,34 @@ public class Experiments {
     // Make the testing calls and print the time after each
     HeadInsert(iterations, "Hello");
     end = System.nanoTime();
-    System.out.println("Insertion at head took " + (end - start)/1000000.0 + "ms.\n");
+	System.out.println();
+	System.out.println();
+    System.out.println("Insertion at Head took " + (end - start)/1000000.0 + "ms.\n");
     
     start = end;
     TailInsert(iterations, "Hello");
     end = System.nanoTime();
-    System.out.println("Insertion at tail took " + (end - start)/1000000.0 + "ms.\n");
+    System.out.println("Insertion at Tail took " + (end - start)/1000000.0 + "ms.\n");
     
     start = end;
     MidpointInsert(iterations, "Hello");
     end = System.nanoTime();
-    System.out.println("Insertion at midpoint took " + (end - start)/1000000.0 + "ms.\n");
+    System.out.println("Insertion at Midpoint took " + (end - start)/1000000.0 + "ms.\n");
+    
+    //start = end;
+    //AlternateInsert(iterations, "Hello");
+   //end = System.nanoTime();
+    //System.out.println("Insertion at tail took " + (end - start)/1000000.0 + "ms.\n");
     
     start = end;
     AlternateInsert(iterations, "Hello");
     end = System.nanoTime();
-    System.out.println("Insertion at tail took " + (end - start)/1000000.0 + "ms.\n");
+    System.out.println("Alternate Insertion took " + (end - start)/1000000.0 + "ms.\n");
     
-    start = end;
-    AlternateInsert(iterations, "Hello");
-    end = System.nanoTime();
-    System.out.println("Alternate insertion took " + (end - start)/1000000.0 + "ms.\n");
-    
-    start = end;
-    SortedInsert(iterations);
-    end = System.nanoTime();
-    System.out.println("Sorted insertion took " + (end - start)/1000000.0 + "ms.\n");
+    //start = end;
+    //SortedInsert(iterations);
+    //end = System.nanoTime();
+    //System.out.println("Sorted insertion took " + (end - start)/1000000.0 + "ms.\n");
   
   }
   
